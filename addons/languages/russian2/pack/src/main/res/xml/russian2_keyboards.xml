@@ -78,8 +78,8 @@
         iconResId="@drawable/ic_status_russian2"
         id="d604b360-a527-11e8-b568-0800200c9a66"
         index="7"
-        landscapeResId="@xml/cyrillic_qwerty"
-        layoutResId="@xml/cyrillic_qwerty"
+        landscapeResId="@xml/cyrillic_qwerty_compact"
+        layoutResId="@xml/cyrillic_qwerty_compact"
         nameResId="@string/russian2_cyrillic_name"
         physicalKeyboardMappingResId="@xml/cyrillic_physical" />
 
