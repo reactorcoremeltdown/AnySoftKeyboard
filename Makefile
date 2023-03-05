@@ -7,4 +7,4 @@ app:
 
 publish: app
 	rm -fr /var/lib/fdroid/unsigned/*
-	tree
+	find . -name '*.apk'
