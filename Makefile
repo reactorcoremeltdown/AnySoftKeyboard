@@ -10,3 +10,4 @@ publish: app
 	mv outputs/apks/debug/addons-languages-russian2-apk-1.apk /var/lib/fdroid/unsigned/com.anysoftkeyboard.languagepack.russian2_$(shell date '+%s').apk
 	touch /var/lib/fdroid/metadata/com.anysoftkeyboard.languagepack.russian2.yml
 	cd /var/lib/fdroid && fdroid publish --verbose && fdroid update --verbose
+	find . -name '*.apk'
