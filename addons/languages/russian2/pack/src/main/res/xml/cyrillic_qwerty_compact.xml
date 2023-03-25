@@ -7,7 +7,7 @@
         <!-- йцукенгшщзхъ    -->
         <Key android:codes="1081" android:keyLabel="й" android:popupCharacters="1ї" android:keyEdgeFlags="left"/>
         <Key android:codes="1094" android:keyLabel="ц" android:popupCharacters="2ћ"/>
-        <Key android:codes="1091" android:keyLabel="у" android:popupCharacters="3ўӱ"/>
+        <Key android:codes="1091" android:keyLabel="у" android:popupCharacters="3у́ўӱ"/>
         <Key android:codes="1082" android:keyLabel="к" android:popupCharacters="4"/>
         <Key android:codes="1077" android:keyLabel="е" android:popupCharacters="5ёјә"/>
         <Key android:codes="1085" android:keyLabel="н" android:popupCharacters="6"/>
