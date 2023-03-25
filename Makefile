@@ -5,7 +5,7 @@ app:
 	test -d /tmp/gradlecache || mkdir /tmp/gradlecache
 	podman run -it \
 		--memory 2g \
-		-e "BUILD_COUNT_FOR_VERSION=${DRONE_BUILD_NUMBER}"
+		-e "BUILD_COUNT_FOR_VERSION=$(DRONE_BUILD_NUMBER)"
 		-v $(shell pwd):/project \
 		-v /tmp/gradlecache:"/root/.gradle" \
 		mingc/android-build-box \
