@@ -8,7 +8,7 @@ app:
 		-v $(shell pwd):/project \
 		-v /tmp/gradlecache:"/root/.gradle" \
 		mingc/android-build-box \
-		bash -c 'cd /project; ./gradlew build'
+		bash -c 'cd /project; android update project -p .; ./gradlew assembleDebug'
 
 publish: app
 	tree outputs/
