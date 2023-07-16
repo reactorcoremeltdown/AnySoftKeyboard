@@ -9,7 +9,8 @@ app:
 		-v $(shell pwd):/project \
 		-v /tmp/gradlecache:"/root/.gradle" \
 		mingc/android-build-box \
-		bash -c 'cd /project; ./gradlew :addons:languages:russian2:apk:assembleDebug'
+		# bash -c 'cd /project; ./gradlew :addons:languages:russian2:apk:assembleDebug'
+		bash -c 'cd /project; ./gradlew build'
 
 publish: app
 	rm -fr /var/lib/fdroid/unsigned/*
