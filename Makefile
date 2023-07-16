@@ -4,7 +4,6 @@ app:
 	echo "Building app"
 	test -d /tmp/gradlecache || mkdir /tmp/gradlecache
 	podman run -it \
-		--memory 2g \
 		-e "BUILD_COUNT_FOR_VERSION=2" \
 		-v $(shell pwd):/project \
 		-v /tmp/gradlecache:"/root/.gradle" \
