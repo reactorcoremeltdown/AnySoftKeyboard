@@ -5,6 +5,7 @@ apply from: "${rootDir}/gradle/android_general.gradle"
 dependencies {
     implementation project(':ime:base')
     implementation project(':ime:base-rx')
+    implementation project(':ime:pixel')
 
     implementation 'androidx.preference:preference:1.2.0'
 
@@ -13,6 +14,10 @@ dependencies {
     api 'org.mockito:mockito-core:2.23.0'
     api project(':junit-sharding')
     api 'androidx.test:core:1.5.0'
+}
+
+android {
+    namespace 'com.anysoftkeyboard.test'
 }
 
 afterEvaluate {
