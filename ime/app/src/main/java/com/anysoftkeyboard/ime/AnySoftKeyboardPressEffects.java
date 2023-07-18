@@ -277,6 +277,36 @@ public abstract class AnySoftKeyboardPressEffects extends AnySoftKeyboardClipboa
 
   private void performKeySound(int primaryCode) {
     if (mCustomSoundVolume != SILENT && primaryCode != 0) {
+      SoundPool sp = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
+      final int soundId;
+      switch (primaryCode) {
+        case 13:
+        case KeyCodes.ENTER:
+          soundId = sp.load(MainActivity.this, R.raw.return, 1);
+          break;
+        case KeyCodes.DELETE:
+          soundId = sp.load(MainActivity.this, R.raw.delete, 1);
+          break;
+        case KeyCodes.SPACE:
+          soundId = sp.load(MainActivity.this, R.raw.spacebar, 1);
+          break;
+        case KeyCodes.SHIFT:
+        case KeyCodes.SHIFT_LOCK:
+        case KeyCodes.CTRL:
+        case KeyCodes.CTRL_LOCK:
+        case KeyCodes.MODE_ALPHABET:
+        case KeyCodes.MODE_SYMBOLS:
+        case KeyCodes.KEYBOARD_MODE_CHANGE:
+        case KeyCodes.KEYBOARD_CYCLE_INSIDE_MODE:
+        case KeyCodes.ALT:
+          soundId = sp.load(MainActivity.this, R.raw.standard, 1);
+          break;
+        default:
+          soundId = sp.load(MainActivity.this, R.raw.standard, 1);
+      }
+
+      sp.play(soundId, 1, 1, 0, 0, 1);
+      /*
       final int keyFX;
       switch (primaryCode) {
         case 13:
@@ -304,6 +334,7 @@ public abstract class AnySoftKeyboardPressEffects extends AnySoftKeyboardClipboa
           keyFX = AudioManager.FX_KEYPRESS_STANDARD;
       }
       mAudioManager.playSoundEffect(keyFX, mCustomSoundVolume);
+      */
     }
   }
 
