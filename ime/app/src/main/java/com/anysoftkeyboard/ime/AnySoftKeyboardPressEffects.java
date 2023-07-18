@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.media.AudioManager;
+import android.media.SoundPool;
 import android.os.SystemClock;
 import android.os.Vibrator;
 import android.provider.Settings;
