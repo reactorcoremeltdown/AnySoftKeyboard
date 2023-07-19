@@ -283,13 +283,13 @@ public abstract class AnySoftKeyboardPressEffects extends AnySoftKeyboardClipboa
       switch (primaryCode) {
         case 13:
         case KeyCodes.ENTER:
-          soundId = sp.load(MainActivity.this, R.raw.btn_return, 1);
+          soundId = sp.load(this, R.raw.btn_return, 1);
           break;
         case KeyCodes.DELETE:
-          soundId = sp.load(MainActivity.this, R.raw.btn_delete, 1);
+          soundId = sp.load(this, R.raw.btn_delete, 1);
           break;
         case KeyCodes.SPACE:
-          soundId = sp.load(MainActivity.this, R.raw.btn_spacebar, 1);
+          soundId = sp.load(this, R.raw.btn_spacebar, 1);
           break;
         case KeyCodes.SHIFT:
         case KeyCodes.SHIFT_LOCK:
@@ -300,10 +300,10 @@ public abstract class AnySoftKeyboardPressEffects extends AnySoftKeyboardClipboa
         case KeyCodes.KEYBOARD_MODE_CHANGE:
         case KeyCodes.KEYBOARD_CYCLE_INSIDE_MODE:
         case KeyCodes.ALT:
-          soundId = sp.load(MainActivity.this, R.raw.btn_standard, 1);
+          soundId = sp.load(this, R.raw.btn_standard, 1);
           break;
         default:
-          soundId = sp.load(MainActivity.this, R.raw.btn_standard, 1);
+          soundId = sp.load(this, R.raw.btn_standard, 1);
       }
 
       sp.play(soundId, 1, 1, 0, 0, 1);
