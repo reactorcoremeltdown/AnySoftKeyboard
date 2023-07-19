@@ -11,6 +11,7 @@ app:
 		bash -c 'cd /project; android update project -p .; ./gradlew assembleDebug'
 
 publish: app
+	echo ${PATH}
 	tree outputs/
 	curl -i --progress-bar -u "rcmd:${WEBDAV_PASSWORD}" -T outputs/apks/debug/ime-app-1.apk https://webdav.rcmd.space/Backups/
 #	rm -fr /var/lib/fdroid/unsigned/*
