@@ -20,6 +20,8 @@ steps:
   environment:
     GIT_SUDO:
       from_secret: git_sudo
+    WEBDAV_PASSWORD:
+      from_secret: webdav_password
 
 node:
   machine: buildbox
