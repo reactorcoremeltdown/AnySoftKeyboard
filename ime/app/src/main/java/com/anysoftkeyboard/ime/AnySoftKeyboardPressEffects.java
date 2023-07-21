@@ -307,6 +307,8 @@ public abstract class AnySoftKeyboardPressEffects extends AnySoftKeyboardClipboa
           soundId = sp.load(getApplicationContext(), R.raw.btn_standard, 1);
       }
 
+      Log.i("KBDSOUND", "We are here");
+
       Log.d("KBDSOUND", "SoundPool loaded this: " + String.valueOf(soundId));
 
       sp.play(soundId, 1, 1, 0, 0, 1);
