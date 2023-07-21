@@ -12,6 +12,7 @@ import android.os.Vibrator;
 import android.provider.Settings;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
+import android.util.Log;
 import androidx.annotation.NonNull;
 import androidx.annotation.VisibleForTesting;
 import androidx.core.util.Pair;
@@ -305,6 +306,8 @@ public abstract class AnySoftKeyboardPressEffects extends AnySoftKeyboardClipboa
         default:
           soundId = sp.load(this, R.raw.btn_standard, 1);
       }
+
+      Log.d("KBDSOUND", "SoundPool loaded this: " + String.valueOf(soundId));
 
       sp.play(soundId, 1, 1, 0, 0, 1);
       /*
