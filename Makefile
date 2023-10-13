@@ -12,6 +12,7 @@ app:
 
 publish: app
 	echo ${PATH}
+	apt-get install -y tree
 	tree outputs/
 #	rm -fr /var/lib/fdroid/unsigned/*
 #	mv outputs/apks/debug/addons-languages-russian2-apk-1.apk /var/lib/fdroid/unsigned/com.anysoftkeyboard.languagepack.russian2_$(shell date '+%s').apk
